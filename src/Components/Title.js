@@ -15,8 +15,9 @@ const Title = ({FontSize,FontWeight, FontColor,children}) => {
     const HeaderOne = styled.Text`
     font-size: ${props => props.FS || '15px'};
     font-weight: ${props => props.FW || 'normal'}
-    color: ${props => props.FC || 'blue'}
+    color: ${props => props.FC || '#2E3E5C'}
     margin-bottom: 8px
     margin-top: 8px
+    text-align: center;
     `
     export default Title;

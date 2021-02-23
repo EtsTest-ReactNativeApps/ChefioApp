@@ -1,6 +1,7 @@
 import React from 'react'
-import {View,Text,StyleSheet,TextInput} from 'react-native'
+import {View,Text,StyleSheet,TextInput,TouchableOpacity} from 'react-native'
 import styled from 'styled-components'
+import Header from '../Components/Header'
 import Button from '../Components/Button'
 import Input from '../Components/Input'
 import Title from '../Components/Title'
@@ -10,14 +11,14 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { SimpleLineIcons } from '@expo/vector-icons';
 
-const SignInScreen = () =>{
+const SignInScreen = ({navigation }) =>{
     return(
     <Alignemt>
-
+        <View style={{marginBottom: 18}}>
     <Header>Welcome Back!</Header>
 
     <Title FontColor={'#9FA5C0'}>   Please enter your account here     </Title>
-         
+    </View >
         <Input InputPlaceHolder={'Email or Phone number'} Password={false}>
         <MaterialCommunityIcons style={styles.IconStyle} name="email-outline" size={24} color="black" />
          </Input>
@@ -36,23 +37,16 @@ const SignInScreen = () =>{
     &nbsp; Google         
      </Button>
      <HorizontalView>
-
+       
         <Title FontColor={'#3E5481'}>&nbsp;Don't have any account?</Title>
-        <Hyperlink><Title FontColor={'#1FCC79'} FontWeight={'bold'}>&nbsp; Sign Up</Title></Hyperlink>
+        <Hyperlink onPress={() => navigation.navigate('SignUp')} ><Title FontColor={'#1FCC79'} FontWeight={'bold'}>&nbsp; Sign Up</Title></Hyperlink>
         </HorizontalView>
         </Alignemt>
         ) 
     
 }
 
-const Header = styled.Text`
-    margin-top: 100px
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 32px;
-    color: #3E5481;
-    text-align: center;
-`
+
 const Alignemt = styled.View`
     align-items:center;
     width: 100%

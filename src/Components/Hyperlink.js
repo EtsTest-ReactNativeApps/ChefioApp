@@ -2,9 +2,9 @@ import React from 'react'
 import {View,TextInput, TouchableOpacity} from 'react-native'
 import styled from 'styled-components'
 
-const Hyperlink = ({children}) =>{
+const Hyperlink = ({children,onPress}) =>{
 return(
-    <TouchableWord> 
+    <TouchableWord onPress={onPress}> 
         {children}
     </TouchableWord>
 )

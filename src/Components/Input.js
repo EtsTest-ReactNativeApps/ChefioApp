@@ -17,6 +17,7 @@ font-size: 15px;
 background-color: white
 width: 372px;
 height :60px
+margin-top: 5px
 margin-bottom: 16px
 padding: 19px
 border: 1px solid #D0DBEA;
