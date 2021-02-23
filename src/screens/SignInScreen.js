@@ -11,7 +11,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
 
 const SignInScreen = () =>{
-
     return(
     <Alignemt>
 
