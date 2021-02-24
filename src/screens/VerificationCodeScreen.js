@@ -9,7 +9,7 @@ import Title from '../Components/Title'
 import HorizontalView from '../Components/HorizontalView'
 import Alignemt from '../Components/AlignemtView'
 
-const VerificationCodeScreen = () =>{
+const VerificationCodeScreen = ({navigation}) =>{
     return(
         <Alignemt>
         <View style={{marginBottom: 18}}>
@@ -25,7 +25,7 @@ const VerificationCodeScreen = () =>{
         
         </HorizontalView>
         <Title>code expires in: <Text style={styles.TextColor}> 5:00</Text></Title>
-        <Button>Next</Button>
+        <Button onPress={() => navigation.navigate('NewPassword')}>Next</Button>
         <ButtonTransparent>Send again</ButtonTransparent>
     </Alignemt>
 
