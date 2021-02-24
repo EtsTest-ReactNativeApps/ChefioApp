@@ -7,6 +7,7 @@ import Input from '../Components/Input'
 import Title from '../Components/Title'
 import Hyperlink from '../Components/Hyperlink'
 import HorizontalView from '../Components/HorizontalView'
+import Alignemt from '../Components/AlignemtView'
 import { AntDesign } from '@expo/vector-icons'; 
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { SimpleLineIcons } from '@expo/vector-icons';
@@ -25,10 +26,10 @@ const SignInScreen = ({navigation }) =>{
      <Input  InputPlaceHolder={'Password'} Password={true}>
      <SimpleLineIcons style={styles.IconStyle} name="lock" size={24} color="black" />
     </Input>
-     <Hyperlink>
+     <Hyperlink  onPress={() => navigation.navigate('PasswordRecovery')}>
         <Title FontColor ={'#2E3E5C'} > Forgot Password?</Title>
      </Hyperlink>
-    <Button   BackColor={'#1FCC79'} > 
+    <Button    > 
      Login
      </Button>
      <Title FontColor={'#9FA5C0'}>   or Continue with     </Title>
@@ -46,14 +47,6 @@ const SignInScreen = ({navigation }) =>{
     
 }
 
-
-const Alignemt = styled.View`
-    align-items:center;
-    width: 100%
-    height: 100%
-    background: white; 
-
-`
 const styles = StyleSheet.create({
   ForgotStyle:{
     fontWeight: '500', 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Button from '../Components/Button'
 import Input from '../Components/Input'
 import Title from '../Components/Title'
-import Hyperlink from '../Components/Hyperlink'
+import Alignemt from '../Components/AlignemtView'
 import HorizontalView from '../Components/HorizontalView'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { SimpleLineIcons } from '@expo/vector-icons';
@@ -55,13 +55,6 @@ const SignUpScreen = () => {
     )
 }
 
-const Alignemt = styled.View`
-    align-items:center;
-    width: 100%
-    height: 100%
-    background: white; 
-
-`
 const styles = StyleSheet.create({
     PasswordCheckStyle:{
         alignItems:'flex-start',
