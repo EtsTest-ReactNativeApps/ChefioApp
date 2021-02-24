@@ -2,7 +2,7 @@ import React, { Children } from 'react'
 import {View,TextInput, passwordInp} from 'react-native'
 import styled from 'styled-components'
 
-const input = ({InputPlaceHolder, Password, children, Width, Height}) => {
+const InputNum = ({InputPlaceHolder, Password, children, Width, Height}) => {
 return(
 <InputView WD={Width} HG={Height}>
     {children}
@@ -15,22 +15,24 @@ return(
 const InputView = styled.View`
 font-size: 15px;
 background-color: white
-width: ${props => props.WD || '90%'};
-height :${props => props.HG || '60px'}
-margin-top: 5px
-margin-bottom: 16px
+width: ${props => props.WD || '20%'};
+height :${props => props.HG || '80px'}
+
+margin: 10px 6px;
+
 padding: 19px
 border: 1px solid #D0DBEA;
 flex-direction : row
-border-radius: 32px;
+border-radius: 20px;
 color: gray
 `
 const InputField = styled.TextInput`
-font-size: 15px;
+font-size: 30px;
 width: 290px;
-height :20px
-margin-bottom: 16px
+height :40px
+margin: 12px 12px
+align-self: center;
 
-color: gray
+color: #3E5481
 `
-export default input;
+export default InputNum;

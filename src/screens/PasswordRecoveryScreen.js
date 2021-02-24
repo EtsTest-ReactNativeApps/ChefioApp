@@ -9,7 +9,7 @@ import Alignemt from '../Components/AlignemtView'
 import HorizontalView from '../Components/HorizontalView'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
-const PasswordRecoveryScreen = () =>{
+const PasswordRecoveryScreen = ({navigation}) =>{
     return(
     <Alignemt>
     <View style={{marginBottom: 18}}>
@@ -24,7 +24,7 @@ const PasswordRecoveryScreen = () =>{
             <MaterialCommunityIcons style={styles.IconStyle} name="email-outline" size={24} color="black" />
 
          </Input>
-     <Button > 
+     <Button onPress={() => navigation.navigate('VerificationCode')}> 
      Continue
      </Button>
         </Alignemt>

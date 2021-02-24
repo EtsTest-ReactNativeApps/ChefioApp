@@ -28,7 +28,7 @@ const RoundedTouchableOpacity = styled.TouchableOpacity`
 const ButtonText = styled.Text`
     font-size: 16px
     font-weight: 700
-    color: ${props => props.FC  || 'white'} 
+    color: ${props => props.FC  || '#9FA5C0'} 
 `
 const styles =  StyleSheet.create({})
 export default ButtonTransparent;
