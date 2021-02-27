@@ -1,0 +1,14 @@
+- spreading props in react to know how to insert more than one prop inside the app
+- condition props in css in styled components to know how to write if condition in css
+- how to use costume font
+
+Folder System
+Componenets --> Core / layout
+Screens --> OS 
+
+Vertical Space / Horizontal
+Layout component have only one prop
+Hieght/Width
+used to make spaces between componenets 
+
+-Make props starting with small letters because the words start with capital letter refers to a constant or a page

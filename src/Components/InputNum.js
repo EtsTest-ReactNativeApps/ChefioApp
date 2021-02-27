@@ -2,11 +2,11 @@ import React, { Children } from 'react'
 import {View,TextInput, passwordInp} from 'react-native'
 import styled from 'styled-components'
 
-const InputNum = ({InputPlaceHolder, Password, children, Width, Height}) => {
+const InputNum = ({inputPlaceHolder, Password, children, Width, Height}) => {
 return(
 <InputView WD={Width} HG={Height}>
     {children}
-    <InputField placeholder={InputPlaceHolder} secureTextEntry={Password}/>
+    <InputField placeholder={inputPlaceHolder} secureTextEntry={Password}/>
 
 </InputView>
 )

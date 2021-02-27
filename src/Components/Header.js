@@ -3,9 +3,9 @@ import {View,TextInput} from 'react-native'
 import styled from 'styled-components'
 
 
-const Header = ({FontSize,FontWeight, FontColor,children,MarginTop}) => {
+const Header = ({fontSize,fontWeight, fontColor,children,marginTop}) => {
     return(
-    <Head FC = {FontColor} FW={FontWeight} FS={FontSize} MT={MarginTop}>
+    <Head FC = {fontColor} FW={fontWeight} FS={fontSize} MT={marginTop}>
      
     {children}
     </Head>

@@ -3,9 +3,9 @@ import {View,TextInput} from 'react-native'
 import styled from 'styled-components'
 
 
-const Title = ({FontSize,FontWeight, FontColor,children}) => {
+const Title = ({fontSize,fontWeight, fontColor,children}) => {
     return(
-    <HeaderOne FC = {FontColor} FW={FontWeight} FS={FontSize}>
+    <HeaderOne FC = {fontColor} FW={fontWeight} FS={fontSize}>
      
     {children}
     </HeaderOne>

@@ -16,10 +16,10 @@ const PasswordRecoveryScreen = ({navigation}) =>{
 
         <Header>Password recovery</Header>
     
-        <Title FontColor={'#9FA5C0'}>   Enter your email to recover your password     </Title>
+        <Title fontColor={'#9FA5C0'}>   Enter your email to recover your password     </Title>
     
         </View >
-        <Input InputPlaceHolder={'Email or Phone number'} Password={false}>
+        <Input inputPlaceHolder={'Email or Phone number'} Password={false}>
 
             <MaterialCommunityIcons style={styles.IconStyle} name="email-outline" size={24} color="black" />
 

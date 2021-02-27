@@ -15,7 +15,7 @@ const VerificationCodeScreen = ({navigation}) =>{
         <View style={{marginBottom: 18}}>
     <Header>Check your email</Header>
 
-    <Title FontColor={'#9FA5C0'}>   We’ve sent the code to your email     </Title>
+    <Title fontColor={'#9FA5C0'}>   We’ve sent the code to your email     </Title>
     </View >
     <HorizontalView>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>

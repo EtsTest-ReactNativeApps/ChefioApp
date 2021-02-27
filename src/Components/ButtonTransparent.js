@@ -2,10 +2,10 @@ import React from 'react'
 import {View,StyleSheet} from 'react-native'
 import styled from 'styled-components'
 
-const ButtonTransparent = ({onPress, children,BackColor,FontColor}) =>{
+const ButtonTransparent = ({onPress, children,backColor,fontColor}) =>{
     return(<View style={styles.Division}>
-       <RoundedTouchableOpacity bg={BackColor}  onPress={onPress} >         
-          <ButtonText FC = {FontColor}
+       <RoundedTouchableOpacity bg={backColor}  onPress={onPress} >         
+          <ButtonText FC = {fontColor}
         
           > {children}</ButtonText>
         

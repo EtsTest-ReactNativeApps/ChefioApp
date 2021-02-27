@@ -1,6 +1,6 @@
 import React from 'react'
-import {View,Text,StyleSheet,TextInput,TouchableOpacity} from 'react-native'
-import styled from 'styled-components'
+import {View,StyleSheet} from 'react-native'
+
 import Header from '../Components/Header'
 import Button from '../Components/Button'
 import Input from '../Components/Input'
@@ -18,29 +18,35 @@ const SignInScreen = ({navigation }) =>{
         <View style={{marginBottom: 18}}>
     <Header>Welcome Back!</Header>
 
-    <Title FontColor={'#9FA5C0'}>   Please enter your account here     </Title>
+    <Title fontColor={'#9FA5C0'}>   Please enter your account here     </Title>
     </View >
-        <Input InputPlaceHolder={'Email or Phone number'} Password={false}>
+
+    <HorizontalView>
+        <Input inputPlaceHolder={'Email or Phone number'} Password={false}>
         <MaterialCommunityIcons style={styles.IconStyle} name="email-outline" size={24} color="black" />
          </Input>
-     <Input  InputPlaceHolder={'Password'} Password={true}>
+         </HorizontalView>
+
+         <HorizontalView>
+     <Input  inputPlaceHolder={'Password'} Password={true}>
      <SimpleLineIcons style={styles.IconStyle} name="lock" size={24} color="black" />
     </Input>
+    </HorizontalView>
      <Hyperlink  onPress={() => navigation.navigate('PasswordRecovery')}>
-        <Title FontColor ={'#2E3E5C'} > Forgot Password?</Title>
+        <Title fontColor ={'#2E3E5C'} > Forgot Password?</Title>
      </Hyperlink>
     <Button    > 
      Login
      </Button>
-     <Title FontColor={'#9FA5C0'}>   or Continue with     </Title>
-     <Button   BackColor={'#FF5842'} > 
+     <Title fontColor={'#9FA5C0'}>   or Continue with     </Title>
+     <Button   backColor={'#FF5842'} > 
     <AntDesign name="google" style = {{}}size={20} color="white" />
     &nbsp; Google         
      </Button>
      <HorizontalView>
        
-        <Title FontColor={'#3E5481'}>&nbsp;Don't have any account?</Title>
-        <Hyperlink onPress={() => navigation.navigate('SignUp')} ><Title FontColor={'#1FCC79'} FontWeight={'bold'}>&nbsp; Sign Up</Title></Hyperlink>
+        <Title fontColor={'#3E5481'}>&nbsp;Don't have any account?</Title>
+        <Hyperlink onPress={() => navigation.navigate('SignUp')} ><Title fontColor={'#1FCC79'} fontWeight={'bold'}>&nbsp; Sign Up</Title></Hyperlink>
         </HorizontalView>
         </Alignemt>
         ) 
