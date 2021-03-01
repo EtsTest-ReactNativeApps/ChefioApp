@@ -2,7 +2,6 @@ import React from 'react'
 import {View,Text,StyleSheet} from 'react-native'
 import Header from '../../Components/core/Header'
 import Button from '../../Components/core/Button'
-import ButtonTransparent from '../../Components/core/ButtonTransparent'
 import InputNum from '../../Components/core/InputNum'
 import Title from '../../Components/core/Title'
 import Row from '../../Components/layout/Row'
@@ -25,7 +24,7 @@ const VerificationCodeScreen = ({navigation}) =>{
         </Row>
         <Title>code expires in: <Text style={styles.TextColor}> 5:00</Text></Title>
         <Button onPress={() => navigation.navigate('NewPassword')}>Next</Button>
-        <ButtonTransparent>Send again</ButtonTransparent>
+        <Button isTransparent backColor={'white'} fontColor={'#9FA5C0'} >Send again</Button>
     </Container>
 
     )

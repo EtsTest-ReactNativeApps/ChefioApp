@@ -2,11 +2,11 @@ import React from 'react'
 import {View,StyleSheet} from 'react-native'
 import styled from 'styled-components'
 
-const Button = ({onPress, children,backColor,fontColor}) =>{
+const Button = ({onPress, children,backColor,fontColor, isTransparent}) =>{
     return(<View style={styles.Division}>
-       <RoundedTouchableOpacity bg={backColor}  onPress={onPress} >         
-          <ButtonText FC = {fontColor}
-        
+       <RoundedTouchableOpacity bg={backColor}  onPress={onPress} isTransparent={isTransparent} >         
+          <ButtonText FC = {fontColor} 
+       
           > {children}</ButtonText>
         
            </RoundedTouchableOpacity>
@@ -16,6 +16,7 @@ const Button = ({onPress, children,backColor,fontColor}) =>{
 const RoundedTouchableOpacity = styled.TouchableOpacity`
     height:60px ;
     background: ${props => props.bg  || '#1FCC79'}
+    border: ${props => props.isTransparent ? '1px solid #D0DBEA' : '0px'};
     border-radius: 32px;
     width: 372px;
     justify-content: center;

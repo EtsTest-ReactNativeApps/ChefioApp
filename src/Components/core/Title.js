@@ -12,6 +12,7 @@ const Title = ({fontSize,fontWeight, fontColor,children}) => {
     }
     
     const HeaderOne = styled.Text`
+   
     font-size: ${props => props.FS || '15px'};
     font-weight: ${props => props.FW || 'normal'}
     color: ${props => props.FC || '#2E3E5C'}

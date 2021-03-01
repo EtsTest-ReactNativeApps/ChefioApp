@@ -1,10 +1,10 @@
-- spreading props in react to know how to insert more than one prop inside the app
-- condition props in css in styled components to know how to write if condition in css
+- spreading props in react to know how to insert more than one prop inside the app DONE
+- condition props in css in styled components to know how to write if condition in css DONE
 - how to use costume font
 
 Folder System
 Componenets --> Core / layout DONE 
-Screens --> OS 
+Screens --> OS DONE
 
 Vertical Space / Horizontal
 Layout component have only one prop
