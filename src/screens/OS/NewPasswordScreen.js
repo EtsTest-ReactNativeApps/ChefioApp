@@ -41,7 +41,7 @@ const NewPasswordScreen = ({navigation}) => {
     </Row>
     </View>
 
-    <Button onPress={() => navigation.navigate('Home')} >Done</Button>
+    <Button onPress={() => navigation.navigate('Tabs')} >Done</Button>
 
     </Container>
     )
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     PasswordCheckStyle:{
         alignItems:'flex-start',
         marginLeft:80,
-        marginBottom: 60,
+        marginBottom: 40,
          width: "100%"
     },
     iconStyle:{

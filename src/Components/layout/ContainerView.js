@@ -1,12 +1,14 @@
 import React from 'react'
-import {View,StyleSheet,SafeAreaView} from 'react-native'
+import {View,StyleSheet} from 'react-native'
 import styled from 'styled-components'
-
+import {  SafeAreaView } from 'react-native-safe-area-context';
 const Container =({children}) =>{
     return(
+        <SafeAreaView  style={{ flex: 1, justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white' }}>
         <ContainerView>
             {children}
         </ContainerView>
+        </SafeAreaView>
     )
 }
 

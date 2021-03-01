@@ -1,6 +1,5 @@
 import React from 'react'
-import {View,StyleSheet,SafeAreaView} from 'react-native'
-
+import {View,StyleSheet,} from 'react-native'
 import Input from '../../Components/core/Input'
 import HorizontalSpace from '../../Components/layout/HorizontalSpace'
 import TextAligment from '../../Components/layout/TextAligment'
@@ -18,7 +17,7 @@ const HomeScreen = ({}) =>{
     return(
     
         <Container>
-            <VerticalSpace height={'40px'} />
+            
         <Input inputPlaceHolder={'Search'} isSearch>
         <AntDesign style={styles.iconStyle} name="search1" size={24} color="#3E5481" />
         </Input>
@@ -50,6 +49,7 @@ const HomeScreen = ({}) =>{
         
         </Row>
     </Container>
+   
     )
 }
 

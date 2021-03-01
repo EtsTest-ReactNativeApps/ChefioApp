@@ -12,7 +12,7 @@ const Header = ({fontSize,fontWeight, fontColor,children,marginTop}) => {
     }
     
     const Head = styled.Text`
-    margin-top: ${props => props.MT || '75px'}
+    margin-top: ${props => props.MT || '35px'}
     font-size: ${props => props.FS || '22px'};
     font-weight: bold;
     line-height: 32px;

@@ -17,7 +17,7 @@ font-size: 15px;
 background-color: ${props => props.isSearch ? '#F4F5F7': 'white'};
 width: ${props => props.WD || '90%'};
 height :${props => props.HG || '60px'}
-margin-top: 5px
+
 margin-bottom: 16px
 padding: 19px
 border: ${props => props.isSearch ? '0px': '1px solid #D0DBEA'};
