@@ -1,8 +1,8 @@
 import React from 'react'
-import {View,TextInput} from 'react-native'
+
 import styled from 'styled-components'
 
-const HorizontalView = ({children}) => {
+const Row = ({children}) => {
     return(
     <Horizontal >
      
@@ -17,4 +17,4 @@ margin-top: 12px
 flex-direction : row
 `
 
-export default HorizontalView;
+export default Row;

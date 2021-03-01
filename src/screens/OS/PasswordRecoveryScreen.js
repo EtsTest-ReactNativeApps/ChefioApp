@@ -1,17 +1,15 @@
 import React from 'react'
-import {View,Text,StyleSheet,TextInput,TouchableOpacity} from 'react-native'
-import styled from 'styled-components'
-import Header from '../Components/Header'
-import Button from '../Components/Button'
-import Input from '../Components/Input'
-import Title from '../Components/Title'
-import Alignemt from '../Components/AlignemtView'
-import HorizontalView from '../Components/HorizontalView'
+import {View,StyleSheet} from 'react-native'
+import Header from '../../Components/core/Header'
+import Button from '../../Components/core/Button'
+import Input from '../../Components/core/Input'
+import Title from '../../Components/core/Title'
+import Container from '../../Components/layout/ContainerView'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const PasswordRecoveryScreen = ({navigation}) =>{
     return(
-    <Alignemt>
+    <Container>
     <View style={{marginBottom: 18}}>
 
         <Header>Password recovery</Header>
@@ -21,19 +19,19 @@ const PasswordRecoveryScreen = ({navigation}) =>{
         </View >
         <Input inputPlaceHolder={'Email or Phone number'} Password={false}>
 
-            <MaterialCommunityIcons style={styles.IconStyle} name="email-outline" size={24} color="black" />
+            <MaterialCommunityIcons style={styles.iconStyle} name="email-outline" size={24} color="black" />
 
          </Input>
      <Button onPress={() => navigation.navigate('VerificationCode')}> 
      Continue
      </Button>
-        </Alignemt>
+        </Container>
         )
 
 }
 
 const styles = StyleSheet.create({
-    IconStyle:{
+    iconStyle:{
         alignSelf: 'center',
         marginHorizontal: 15
         

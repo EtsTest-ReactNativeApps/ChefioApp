@@ -2,10 +2,10 @@ import React, { Children } from 'react'
 import {View,TextInput, StyleSheet,Text, StatusBar, SafeAreaView,Image} from 'react-native'
 import styled from 'styled-components'
 
-import Alignemt from '../Components/AlignemtView'
-import Title from '../Components/Title'
-import Header from '../Components/Header'
-import Button from '../Components/Button'
+import Container from '../../Components/layout/ContainerView'
+import Title from '../../Components/Title'
+import Header from '../../Components/Header'
+import Button from '../../Components/core/Button'
 
 
 const OnboardingScreen = () =>{

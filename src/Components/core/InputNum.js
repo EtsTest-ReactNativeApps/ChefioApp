@@ -1,5 +1,4 @@
-import React, { Children } from 'react'
-import {View,TextInput, passwordInp} from 'react-native'
+import React from 'react'
 import styled from 'styled-components'
 
 const InputNum = ({inputPlaceHolder, Password, children, Width, Height}) => {

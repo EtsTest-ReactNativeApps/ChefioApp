@@ -4,11 +4,11 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SignInScreen from './src/screens/SignInScreen'
-import SignUpScreen from './src/screens/SignUpScreen'
-import VerificationCodeScreen from './src/screens/VerificationCodeScreen'
-import PasswordRecoveryScreen from './src/screens/PasswordRecoveryScreen'
-import NewPasswordScreen from './src/screens/NewPasswordScreen'
+import SignInScreen from './src/screens/OS/SignInScreen'
+import SignUpScreen from './src/screens/OS/SignUpScreen'
+import VerificationCodeScreen from './src/screens/OS/VerificationCodeScreen'
+import PasswordRecoveryScreen from './src/screens/OS/PasswordRecoveryScreen'
+import NewPasswordScreen from './src/screens/OS/NewPasswordScreen'
 
 const Stack = createStackNavigator();
 

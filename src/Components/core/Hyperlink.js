@@ -1,5 +1,4 @@
 import React from 'react'
-import {View,TextInput, TouchableOpacity} from 'react-native'
 import styled from 'styled-components'
 
 const Hyperlink = ({children,onPress}) =>{

@@ -1,33 +1,32 @@
 import React from 'react'
-import {View,Text,StyleSheet,TextInput,TouchableOpacity} from 'react-native'
-import styled from 'styled-components'
-import Header from '../Components/Header'
-import Button from '../Components/Button'
-import ButtonTransparent from '../Components/ButtonTransparent'
-import InputNum from '../Components/InputNum'
-import Title from '../Components/Title'
-import HorizontalView from '../Components/HorizontalView'
-import Alignemt from '../Components/AlignemtView'
+import {View,Text,StyleSheet} from 'react-native'
+import Header from '../../Components/core/Header'
+import Button from '../../Components/core/Button'
+import ButtonTransparent from '../../Components/core/ButtonTransparent'
+import InputNum from '../../Components/core/InputNum'
+import Title from '../../Components/core/Title'
+import Row from '../../Components/layout/Row'
+import Container from '../../Components/layout/ContainerView'
 
 const VerificationCodeScreen = ({navigation}) =>{
     return(
-        <Alignemt>
+        <Container>
         <View style={{marginBottom: 18}}>
     <Header>Check your email</Header>
 
     <Title fontColor={'#9FA5C0'}>   We’ve sent the code to your email     </Title>
     </View >
-    <HorizontalView>
+    <Row>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>
         
-        </HorizontalView>
+        </Row>
         <Title>code expires in: <Text style={styles.TextColor}> 5:00</Text></Title>
         <Button onPress={() => navigation.navigate('NewPassword')}>Next</Button>
         <ButtonTransparent>Send again</ButtonTransparent>
-    </Alignemt>
+    </Container>
 
     )
 }

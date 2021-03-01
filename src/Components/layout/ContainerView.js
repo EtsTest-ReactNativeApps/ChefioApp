@@ -2,16 +2,16 @@ import React from 'react'
 import {View,StyleSheet} from 'react-native'
 import styled from 'styled-components'
 
-const Alignemt =({children}) =>{
+const Container =({children}) =>{
     return(
-        <AlignemtView>
+        <ContainerView>
             {children}
-        </AlignemtView>
+        </ContainerView>
     )
 }
 
 
-const AlignemtView = styled.View`
+const ContainerView = styled.View`
     align-items:center;
     width: 100%
     height: 100%
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Alignemt
+export default Container

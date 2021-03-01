@@ -3,12 +3,12 @@
 - how to use costume font
 
 Folder System
-Componenets --> Core / layout
+Componenets --> Core / layout DONE 
 Screens --> OS 
 
 Vertical Space / Horizontal
 Layout component have only one prop
 Hieght/Width
-used to make spaces between componenets 
+used to make spaces between componenets DONE
 
--Make props starting with small letters because the words start with capital letter refers to a constant or a page
+-Make props starting with small letters because the words start with capital letter refers to a constant or a page DONE

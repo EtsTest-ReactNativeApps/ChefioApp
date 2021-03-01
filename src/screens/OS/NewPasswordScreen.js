@@ -1,19 +1,17 @@
 import React from 'react'
-import {View,Text,StyleSheet,TextInput} from 'react-native'
-import Header from '../Components/Header'
-import styled from 'styled-components'
-import Button from '../Components/Button'
-import Input from '../Components/Input'
-import Title from '../Components/Title'
-import Alignemt from '../Components/AlignemtView'
-import HorizontalView from '../Components/HorizontalView'
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import {View,StyleSheet} from 'react-native'
+import Header from '../../Components/core/Header'
+import Button from '../../Components/core/Button'
+import Input from '../../Components/core/Input'
+import Title from '../../Components/core/Title'
+import Container from '../../Components/layout/ContainerView'
+import Row from '../../Components/layout/Row'
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
 
 const NewPasswordScreen = () => {
-    return(<Alignemt>
+    return(<Container>
         <View style={{marginBottom: 18}}>
 
     <Header>Reset your password</Header>
@@ -24,28 +22,28 @@ const NewPasswordScreen = () => {
 
      <Input  inputPlaceHolder={'Password'} Password={true}>
 
-     <SimpleLineIcons style={styles.IconStyle} name="lock" size={24} color="black" />
+     <SimpleLineIcons style={styles.iconStyle} name="lock" size={24} color="black" />
 
     </Input>
 
     <View style = {styles.PasswordCheckStyle}>
 
     <Title fontSize={'17px'} fontColor={'#3E5481'} >Your Password must contain:</Title>
-    <HorizontalView>
-    <AntDesign style={styles.IconStyle} name="checkcircle" size={20} color="green" />
+    <Row>
+    <AntDesign style={styles.iconStyle} name="checkcircle" size={20} color="green" />
     <Title>At least 6 characters</Title>
-    </HorizontalView>
+    </Row>
     
-    <HorizontalView>
-    <AntDesign style={styles.IconStyle} name="checkcircle" size={20} color="green" />
+    <Row>
+    <AntDesign style={styles.iconStyle} name="checkcircle" size={20} color="green" />
     <Title>Conatins a number</Title>
     
-    </HorizontalView>
+    </Row>
     </View>
 
     <Button >Done</Button>
 
-    </Alignemt>
+    </Container>
     )
 }
 
@@ -56,7 +54,7 @@ const styles = StyleSheet.create({
         marginBottom: 60,
          width: "100%"
     },
-    IconStyle:{
+    iconStyle:{
         alignSelf: 'center',
         marginHorizontal: 15
         
