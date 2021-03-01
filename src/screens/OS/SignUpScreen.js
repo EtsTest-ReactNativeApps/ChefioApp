@@ -23,13 +23,13 @@ const SignUpScreen = () => {
 
         <Input inputPlaceHolder={'Email or Phone number'} Password={false}>
 
-        <MaterialCommunityIcons style={styles.iconStyle} name="email-outline" size={24} color="black" />
+        <MaterialCommunityIcons style={styles.iconStyle} name="email-outline" size={24} color="#3E5481" />
 
          </Input>
 
      <Input  inputPlaceHolder={'Password'} Password={true}>
 
-     <SimpleLineIcons style={styles.iconStyle} name="lock" size={24} color="black" />
+     <SimpleLineIcons style={styles.iconStyle} name="lock" size={24} color="#3E5481" />
 
     </Input>
 

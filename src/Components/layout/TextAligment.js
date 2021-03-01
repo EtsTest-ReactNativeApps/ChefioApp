@@ -1,26 +1,23 @@
 import React from 'react'
-import {StyleSheet} from 'react-native'
 import styled from 'styled-components'
+import {View, StyleSheet} from 'react-native'
 
-const Row = ({children,  direction}) => {
-    return(
-    <Horizontal  direction= {direction} >
-     
-    {children}
-    </Horizontal>
-    )
-    }
+const TextAligment = ({children, direction}) =>{
+return(<Aligment direction= {direction}>
 
+{children}
 
-const Horizontal = styled.View`
+</Aligment>)
+}
 
-flex-direction : row
+const styles = StyleSheet.create({
+
+})
+
+const Aligment = styled.View`
 margin-left:${props => props.direction == 'flex-start' ? '24px' : '0px'}
 margin-right:${props => props.direction == 'flex-end' ? '24px' : '0px'}
 align-self:${props => props.direction || 'center'}
-
 `
 
-
-
-export default Row;
+export default TextAligment;

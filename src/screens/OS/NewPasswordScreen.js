@@ -10,7 +10,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
 
-const NewPasswordScreen = () => {
+const NewPasswordScreen = ({navigation}) => {
     return(<Container>
         <View style={{marginBottom: 18}}>
 
@@ -20,28 +20,28 @@ const NewPasswordScreen = () => {
 
     </View >
 
-     <Input  inputPlaceHolder={'Password'} Password={true}>
+     <Input  inputPlaceHolder={'Password'} Password={true} >
 
-     <SimpleLineIcons style={styles.iconStyle} name="lock" size={24} color="black" />
+     <SimpleLineIcons style={styles.iconStyle} name="lock" size={24} color="#3E5481" />
 
     </Input>
 
     <View style = {styles.PasswordCheckStyle}>
 
     <Title fontSize={'17px'} fontColor={'#3E5481'} >Your Password must contain:</Title>
-    <Row>
+    <Row direction={'flex-start'}>
     <AntDesign style={styles.iconStyle} name="checkcircle" size={20} color="green" />
     <Title>At least 6 characters</Title>
     </Row>
     
-    <Row>
+    <Row direction={'flex-start'}>
     <AntDesign style={styles.iconStyle} name="checkcircle" size={20} color="green" />
     <Title>Conatins a number</Title>
     
     </Row>
     </View>
 
-    <Button >Done</Button>
+    <Button onPress={() => navigation.navigate('Home')} >Done</Button>
 
     </Container>
     )

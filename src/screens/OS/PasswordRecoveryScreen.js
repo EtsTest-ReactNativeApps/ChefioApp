@@ -19,7 +19,7 @@ const PasswordRecoveryScreen = ({navigation}) =>{
         </View >
         <Input inputPlaceHolder={'Email or Phone number'} Password={false}>
 
-            <MaterialCommunityIcons style={styles.iconStyle} name="email-outline" size={24} color="black" />
+            <MaterialCommunityIcons style={styles.iconStyle} name="email-outline" size={24} color="#3E5481" />
 
          </Input>
      <Button onPress={() => navigation.navigate('VerificationCode')}> 

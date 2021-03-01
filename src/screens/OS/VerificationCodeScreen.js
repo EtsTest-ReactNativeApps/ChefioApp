@@ -6,6 +6,7 @@ import InputNum from '../../Components/core/InputNum'
 import Title from '../../Components/core/Title'
 import Row from '../../Components/layout/Row'
 import Container from '../../Components/layout/ContainerView'
+import VerticalSpace from '../../Components/layout/VerticalSpace'
 
 const VerificationCodeScreen = ({navigation}) =>{
     return(
@@ -15,6 +16,7 @@ const VerificationCodeScreen = ({navigation}) =>{
 
     <Title fontColor={'#9FA5C0'}>   We’ve sent the code to your email     </Title>
     </View >
+    <VerticalSpace height={'12px'}/>
     <Row>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>
         <InputNum Height={'72px'} Width={'20%'}></InputNum>

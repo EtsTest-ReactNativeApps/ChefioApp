@@ -23,7 +23,7 @@ padding: 19px
 border: ${props => props.isSearch ? '0px': '1px solid #D0DBEA'};
 flex-direction : row
 border-radius: 32px;
-color: gray
+color: #9FA5C0
 `
 const InputField = styled.TextInput`
 font-size: 15px;
