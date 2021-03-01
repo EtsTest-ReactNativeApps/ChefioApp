@@ -36,7 +36,7 @@ const SignInScreen = ({navigation }) =>{
      <Hyperlink  onPress={() => navigation.navigate('PasswordRecovery')}>
         <Title fontColor ={'#2E3E5C'} > Forgot Password?</Title>
      </Hyperlink>
-    <Button   > 
+    <Button onPress={()=> navigation.navigate('Home')}  > 
      Login
      </Button>
      <Title fontColor={'#9FA5C0'}>   or Continue with     </Title>
