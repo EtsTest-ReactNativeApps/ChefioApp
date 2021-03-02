@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Title = ({fontSize,fontWeight, fontColor,children}) => {
     return(
-    <HeaderOne FC = {fontColor} FW={fontWeight} FS={fontSize}>
+    <HeaderOne  FC = {fontColor} FW={fontWeight} FS={fontSize}>
      
     {children}
     </HeaderOne>

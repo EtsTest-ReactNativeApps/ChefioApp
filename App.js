@@ -12,8 +12,8 @@ import SignUpScreen from './src/screens/OS/SignUpScreen'
 import VerificationCodeScreen from './src/screens/OS/VerificationCodeScreen'
 import PasswordRecoveryScreen from './src/screens/OS/PasswordRecoveryScreen'
 import NewPasswordScreen from './src/screens/OS/NewPasswordScreen'
-import HomeScreen from './src/screens/HS/HomeScreen'
-import ProfileScreen from './src/screens/HS/ProfileScreen';
+import HomeScreen from './src/screens/TS/HomeScreen'
+import ProfileScreen from './src/screens/TS/ProfileScreen';
 
 const Stack = createStackNavigator();
 

@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.1.0",
@@ -19,7 +20,7 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-gesture-handler": "^1.5.3",
-    "react-native-screens": "^2.18.0",
+    "react-native-screens": "~2.15.2",
     "react-native-web": "~0.13.12",
     "styled-components": "^5.2.1"
   },
@@ -27,7 +28,10 @@
     "styled-components": "^5"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "eslint": "^6.0.0",
+    "eslint-config-react-native": "^4.1.0",
+    "eslint-plugin-react": "^7.22.0"
   },
   "private": true
 }
