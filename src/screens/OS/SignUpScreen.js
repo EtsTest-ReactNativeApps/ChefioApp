@@ -36,12 +36,12 @@ const SignUpScreen = () => {
     <View style = {styles.PasswordCheckStyle}>
 
     <Title fontSize={'17px'} fontColor={'#3E5481'} >Your Password must contain:</Title>
-    <Row>
+    <Row direction={'flex-start'}>
     <AntDesign style={styles.iconStyle} name="checkcircle" size={20} color="green" />
     <Title>At least 6 characters</Title>
     </Row>
     
-    <Row>
+    <Row direction={'flex-start'}> 
     <AntDesign style={styles.iconStyle} name="checkcircle" size={20} color="green" />
     <Title>Conatins a number</Title>
     

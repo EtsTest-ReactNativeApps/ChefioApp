@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-// eslint-disable-next-line import/named
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native'
+import { View, StyleSheet, TouchableOpacity} from 'react-native'
 import Input from '../../Components/core/Input'
 import HorizontalSpace from '../../Components/layout/HorizontalSpace'
 import Title from '../../Components/core/Title'
@@ -9,9 +8,12 @@ import Container from '../../Components/layout/ContainerView'
 import { AntDesign } from '@expo/vector-icons'
 import Row from '../../Components/layout/Row'
 import Button from '../../Components/core/Button';
+import Taping from '../../Components/core/TabButton'
+
 
 const HomeScreen = () => {
 	var [buttonClick, setButtonClick] = useState({ btnSelected: 1 })
+    var [tabClick, setTabClick] = useState({ tabSelected: 1 })
 
 	return (
         
@@ -70,18 +72,30 @@ const HomeScreen = () => {
 			<VerticalSpace height={'20px'} />
 			<VerticalSpace height={'8px'} backColor={'#F4F5F7'} />
 			<VerticalSpace height={'15px'} />
-			<Row>
-				<View width={'50%'}>
-					<TouchableOpacity style={styles.headerWrapper}>
-						<Title>Left</Title>
-					</TouchableOpacity>
-				</View>
-				<View width={'50%'}>
-					<TouchableOpacity style={styles.headerWrapper}>
-						<Title>Right</Title>
-					</TouchableOpacity>
-				</View>
-			</Row>
+                    <Row>
+                    <Taping style={
+						tabClick.tabSelected == 1
+							? null
+							: styles.notTabed
+					}  fontColor={
+						tabClick.tabSelected == 1
+							? null
+							: '#9FA5C0'
+					}
+                    onPress={() => setTabClick({ tabSelected: 1 })} >Left</Taping>
+                    <Taping
+                    style={
+						tabClick.tabSelected == 2
+							? null
+							: styles.notTabed
+					}
+                    fontColor={
+						tabClick.tabSelected == 2
+							? null
+							: '#9FA5C0'
+					}
+                    onPress={() => setTabClick({ tabSelected: 2 })}>Right</Taping>
+                    </Row>
 		</Container>
 	)
 }
@@ -91,14 +105,15 @@ const styles = StyleSheet.create({
 		alignSelf: 'center',
 		marginHorizontal: 15,
 	},
-	headerWrapper: {
-		borderBottomColor: '#1FCC79',
-		borderBottomWidth: 2,
-		marginBottom: 10,
-	},
+	
 	notSelected: {
         backgroundColor: '#F4F5F7',
         color: '#9FA5C0', 
+    },
+    notTabed: {
+        borderBottomColor: '#D0DBEA',
+        borderBottomWidth: 1,
+        color: '#9FA5C0'
     }
 })
 

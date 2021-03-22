@@ -8,7 +8,7 @@ import Container from '../../Components/layout/ContainerView'
 import Row from '../../Components/layout/Row'
 import { SimpleLineIcons } from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons'
-const NewPasswordScreen = (navigation) => {
+const NewPasswordScreen = ({navigation}) => {
 	return (
 		<Container>
 			<View style={{ marginBottom: 18 }}>
