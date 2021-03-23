@@ -1,7 +1,7 @@
 
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet,View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {  createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -43,8 +43,10 @@ const AppTabsScreen = () =>{
             return <Feather name="edit-3" size={size} color={color} /> ;
 
             case 'Scan':
-            iconName = focused ? 'ios-list-box' : 'ios-list'
-            return <AntDesign name="scan1" size={size} color={color} />
+              color = focused ? 'white' : 'white'
+            return(<View style={styles.ScanStyle}  >
+               <AntDesign  name="scan1" size={size} color={color} /> 
+            </View>)
 
             case 'Notification':
            
@@ -105,5 +107,14 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-
+ScanStyle:{
+    backgroundColor: '#1FCC79',
+    height:50,
+    width:50,
+    marginBottom: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 35
+  
+}
 });
