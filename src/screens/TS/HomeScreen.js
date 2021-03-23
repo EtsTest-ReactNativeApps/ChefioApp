@@ -17,8 +17,15 @@ const HomeScreen = () => {
     var [tabClick, setTabClick] = useState({ tabSelected: 1 })
 
 	return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+		
+        <ScrollView 
+		showsVerticalScrollIndicator={false}
+		StickyHeaderComponent
+		
+		>
+			
         <Container>
+			<VerticalSpace height={'20px'}/>
         	<Input inputPlaceHolder={'Search'} isSearch>
 				<AntDesign
 					style={styles.iconStyle}
@@ -109,7 +116,9 @@ const HomeScreen = () => {
 					</View>
 					
 		</Container>
+		
 		</ScrollView>
+	
 	)
 }
 
