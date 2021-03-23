@@ -6,6 +6,7 @@ import Input from '../../Components/core/Input';
 import Title from '../../Components/core/Title';
 import Container from '../../Components/layout/ContainerView';
 import Row from '../../Components/layout/Row';
+import RecipeCard from '../../Components/core/RecipeCard'
 
 const ProfileScreen = () =>{
     
@@ -48,6 +49,10 @@ const notClicked ={
                 Drink
             </ButtonTransparent>
             </Row>
+            
+            <RecipeCard />
+            <RecipeCard />
+            <RecipeCard />
             </Container>
           
     )

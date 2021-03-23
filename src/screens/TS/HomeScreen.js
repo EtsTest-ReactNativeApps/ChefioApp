@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, TouchableOpacity} from 'react-native'
+import { View, StyleSheet, ScrollView} from 'react-native'
 import Input from '../../Components/core/Input'
 import HorizontalSpace from '../../Components/layout/HorizontalSpace'
 import Title from '../../Components/core/Title'
@@ -9,6 +9,7 @@ import { AntDesign } from '@expo/vector-icons'
 import Row from '../../Components/layout/Row'
 import Button from '../../Components/core/Button';
 import Taping from '../../Components/core/TabButton'
+import RecipeCard from '../../Components/core/RecipeCard'
 
 
 const HomeScreen = () => {
@@ -16,7 +17,7 @@ const HomeScreen = () => {
     var [tabClick, setTabClick] = useState({ tabSelected: 1 })
 
 	return (
-        
+        <ScrollView showsVerticalScrollIndicator={false}>
         <Container>
         	<Input inputPlaceHolder={'Search'} isSearch>
 				<AntDesign
@@ -96,7 +97,19 @@ const HomeScreen = () => {
 					}
                     onPress={() => setTabClick({ tabSelected: 2 })}>Right</Taping>
                     </Row>
+					<View style={styles.CardsStyle}>
+					
+					<RecipeCard/>
+					<RecipeCard/>
+					<RecipeCard/>
+					<RecipeCard/>
+					<RecipeCard/>
+					<RecipeCard/>
+					
+					</View>
+					
 		</Container>
+		</ScrollView>
 	)
 }
 
@@ -114,7 +127,12 @@ const styles = StyleSheet.create({
         borderBottomColor: '#D0DBEA',
         borderBottomWidth: 1,
         color: '#9FA5C0'
-    }
+    },
+	CardsStyle:{
+		flexDirection: 'row',
+		justifyContent: 'space-around',
+		flexWrap: 'wrap'
+	}
 })
 
 export default HomeScreen

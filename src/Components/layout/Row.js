@@ -2,7 +2,7 @@ import React from 'react'
 import {StyleSheet} from 'react-native'
 import styled from 'styled-components'
 
-const Row = ({children,  direction}) => {
+const Row = ({children,  direction,  }) => {
     return(
     <Horizontal  direction= {direction} >
      
@@ -13,7 +13,7 @@ const Row = ({children,  direction}) => {
 
 
 const Horizontal = styled.View`
-
+flexWrap: wrap
 flex-direction : row
 margin-left:${props => props.direction == 'flex-start' ? '24px' : '0px'}
 margin-right:${props => props.direction == 'flex-end' ? '24px' : '0px'}
