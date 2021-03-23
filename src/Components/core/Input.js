@@ -2,11 +2,16 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-const input = ({inputPlaceHolder, Password, children, Width, Height, isSearch}) => {
+const input = ({inputPlaceHolder, Password, children, Width, Height, isSearch,term, onTermChange, onTermSubmit}) => {
 return(
 <InputView WD={Width} HG={Height} isSearch={isSearch}>
     {children}
-    <InputField placeholder={inputPlaceHolder} secureTextEntry={Password}/>
+    <InputField                       
+                        value = {term}
+                        onChangeText = {onTermChange}
+                        onEndEditing = {onTermSubmit}
+                        placeholder={inputPlaceHolder}
+                         secureTextEntry={Password}/>
 
 </InputView>
 )

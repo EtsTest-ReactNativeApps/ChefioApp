@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, StyleSheet ,View} from 'react-native'
+import { Image, StyleSheet ,View,FlatList} from 'react-native'
 
 import Row from '../layout/Row'
 import VerticalSpace from '../layout/VerticalSpace'

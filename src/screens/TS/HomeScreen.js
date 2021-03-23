@@ -1,20 +1,34 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, ScrollView} from 'react-native'
-import Input from '../../Components/core/Input'
+import { View, StyleSheet, ScrollView,Text} from 'react-native'
 import HorizontalSpace from '../../Components/layout/HorizontalSpace'
 import Title from '../../Components/core/Title'
 import VerticalSpace from '../../Components/layout/VerticalSpace'
 import Container from '../../Components/layout/ContainerView'
-import { AntDesign } from '@expo/vector-icons'
 import Row from '../../Components/layout/Row'
 import Button from '../../Components/core/Button';
 import Taping from '../../Components/core/TabButton'
 import RecipeCard from '../../Components/core/RecipeCard'
-
-
+import SearchBar from '../../Components/core/SearchBar'
+import yelp from '../../api/yelp'
+import Input from '../../Components/core/Input'
+import { AntDesign } from '@expo/vector-icons'
 const HomeScreen = () => {
 	var [buttonClick, setButtonClick] = useState({ btnSelected: 1 })
     var [tabClick, setTabClick] = useState({ tabSelected: 1 })
+
+	const [term,setTerm] = useState('');
+    const [results,setResults] = useState([])
+
+	const searchApi = async() =>{
+		const response = await yelp.get('/search', {
+            params: {
+                limit: 50,
+                term,
+                location: 'san jose'
+            }
+        })
+		setResults(response.data.businesses)
+	}
 
 	return (
 		
@@ -26,14 +40,12 @@ const HomeScreen = () => {
 			
         <Container>
 			<VerticalSpace height={'20px'}/>
-        	<Input inputPlaceHolder={'Search'} isSearch>
-				<AntDesign
-					style={styles.iconStyle}
-					name='search1'
-					size={24}
-					color='#3E5481'
-				/>
-			</Input>	
+
+        		<SearchBar term = {term}
+        				   onTermChange = {setTerm}
+         				  onTermSubmit = {searchApi} />
+
+			<Text>We Have found {results.length}</Text>
         	<Row direction={'flex-start'}>
 				<Title fontWeight={'700'} fontSize={'17px'}>
 					Category
@@ -123,11 +135,11 @@ const HomeScreen = () => {
 }
 
 const styles = StyleSheet.create({
+
 	iconStyle: {
 		alignSelf: 'center',
 		marginHorizontal: 15,
 	},
-	
 	notSelected: {
         backgroundColor: '#F4F5F7',
         color: '#9FA5C0', 
