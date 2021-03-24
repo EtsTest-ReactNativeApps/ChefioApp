@@ -5,7 +5,7 @@ import {  SafeAreaView } from 'react-native-safe-area-context';
 const Container =({children}) =>{
     return(
         <SafeAreaView  style={{ flex: 1, justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white' }}>
-        <ContainerView>
+        <ContainerView >
             {children}
         </ContainerView>
         </SafeAreaView>
@@ -18,6 +18,7 @@ const ContainerView = styled(SafeAreaView)`
     width: 100%
     height: 100%
     background: white; 
+    
 
 `
 const styles = StyleSheet.create({

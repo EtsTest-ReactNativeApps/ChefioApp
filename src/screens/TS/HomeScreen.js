@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { View, StyleSheet, ScrollView,Text} from 'react-native'
+import { View, StyleSheet, ScrollView,Text,FlatList} from 'react-native'
 import HorizontalSpace from '../../Components/layout/HorizontalSpace'
 import Title from '../../Components/core/Title'
 import VerticalSpace from '../../Components/layout/VerticalSpace'
@@ -7,10 +7,9 @@ import Container from '../../Components/layout/ContainerView'
 import Row from '../../Components/layout/Row'
 import Button from '../../Components/core/Button';
 import Taping from '../../Components/core/TabButton'
-import RecipeCard from '../../Components/core/RecipeCard'
 import SearchBar from '../../Components/core/SearchBar'
 import useResults from '../../hooks/useResults'
-
+import RecipeDetails from '../../Components/core/RecipeDetails'
 
 const HomeScreen = () => {
 	var [buttonClick, setButtonClick] = useState({ btnSelected: 1 })
@@ -24,11 +23,11 @@ const HomeScreen = () => {
 		
 		switch(kind){
 			case 1:
-				searchApi('restaurant')
+				return searchApi('restaurant')
 			case 2:
-				 searchApi('food')
+				 return searchApi('food')
 			case 3:
-				 searchApi('drink')
+				return searchApi('drink')
 			default :
 				break;
 		}
@@ -37,117 +36,141 @@ const HomeScreen = () => {
 
 	return (
 		
-        <ScrollView 
-		showsVerticalScrollIndicator={false}
-		StickyHeaderComponent
+        // <ScrollView 
+		// showsVerticalScrollIndicator={false}
+		// StickyHeaderComponent
 		
-		>
+		// >
 			
         <Container>
-			<VerticalSpace height={'20px'}/>
-
-        		<SearchBar term = {term}
-        				   onTermChange = {setTerm}
-         				  onTermSubmit = {() =>searchApi(term)} />
-
-			<Text>We Have found {results.length}</Text>
-        	<Row direction={'flex-start'}>
-				<Title fontWeight={'700'} fontSize={'17px'}>
-					Category
-				</Title>
-			</Row>
-		
-			<Row direction={'flex-start'}>
-				<Button
-					style={
-						(buttonClick.btnSelected == 1)
-							? null
-							: styles.notSelected
-					} 
-					onPressIn = {() =>{setButtonClick({ btnSelected: 1	})
-					}}
-                    onPress={() =>{ 
-									filterResultByKind(buttonClick.btnSelected) 
-									}
-				} 
-                    width={'72px'} 
-				>
-					All
-				</Button>
-				<HorizontalSpace width={'15px'} />
-				<Button
-					style={
-						(buttonClick.btnSelected == 2)
-							? null
-							: styles.notSelected
-					} 
-					onPressIn = {() =>{setButtonClick({ btnSelected: 2	})}}
-                    onPress={() => {
-					filterResultByKind(buttonClick.btnSelected)
-					}
-				} 
-                     width={'90px'}
-				>
-				Food
-				</Button>
-				<HorizontalSpace width={'15px'} />
-				<Button
-					style={
-						buttonClick.btnSelected == 3
-							? null
-							: styles.notSelected
-					}
-					onPressIn = {() =>{setButtonClick({ btnSelected: 3	})}}
-                    onPress={() => {
-					filterResultByKind(buttonClick.btnSelected)
-					}
-				} 
-                     width={'95px'}
-				>
-				Drink
-				</Button>
-			</Row>
-			<VerticalSpace height={'20px'} />
-			<VerticalSpace height={'8px'} backColor={'#F4F5F7'} />
-			<VerticalSpace height={'15px'} />
-                    <Row>
-                    <Taping style={
-						tabClick.tabSelected == 1
-							? null
-							: styles.notTabed
-					}  fontColor={
-						tabClick.tabSelected == 1
-							? null
-							: '#9FA5C0'
-					}
-                    onPress={() => setTabClick({ tabSelected: 1 })} >Left</Taping>
-                    <Taping
-                    style={
-						tabClick.tabSelected == 2
-							? null
-							: styles.notTabed
-					}
-                    fontColor={
-						tabClick.tabSelected == 2
-							? null
-							: '#9FA5C0'
-					}
-                    onPress={() => setTabClick({ tabSelected: 2 })}>Right</Taping>
-                    </Row>
+			<View>
+			
+					
 					<View style={styles.CardsStyle}>
-					{errMessg ? <Text> {errMessg} </Text> : null}
-					<RecipeCard/>
-					<RecipeCard/>
-					<RecipeCard/>
-					<RecipeCard/>
-					<RecipeCard/>
-					<RecipeCard/>
+					{errMessg ? <Text> {errMessg} </Text> :   
+            <FlatList 
+
+			ListHeaderComponent={
+				<> 
+				<Container>
+				<VerticalSpace height={'20px'}/>
+
+<SearchBar term = {term}
+		   onTermChange = {setTerm}
+		   onTermSubmit = {() =>searchApi(term)} />
+
+<Text>We Have found {results.length}</Text>
+<Row direction={'flex-start'}>
+<Title fontWeight={'700'} fontSize={'17px'}>
+	Category
+</Title>
+</Row>
+
+<Row direction={'flex-start'}>
+<Button
+	style={
+		(buttonClick.btnSelected == 1)
+			? null
+			: styles.notSelected
+	} 
+	onPressIn = {() =>{setButtonClick({ btnSelected: 1	})
+	}}
+	onPress={() =>{ 
+					filterResultByKind(buttonClick.btnSelected) 
+					}
+} 
+	width={'72px'} 
+>
+	All
+</Button>
+<HorizontalSpace width={'15px'} />
+<Button
+	style={
+		(buttonClick.btnSelected == 2)
+			? null
+			: styles.notSelected
+	} 
+	onPressIn = {() =>{setButtonClick({ btnSelected: 2	})}}
+	onPress={() => {
+	filterResultByKind(buttonClick.btnSelected)
+	}
+} 
+	 width={'90px'}
+>
+Food
+</Button>
+<HorizontalSpace width={'15px'} />
+<Button
+	style={
+		buttonClick.btnSelected == 3
+			? null
+			: styles.notSelected
+	}
+	onPressIn = {() =>{setButtonClick({ btnSelected: 3	})}}
+	onPress={() => {
+	filterResultByKind(buttonClick.btnSelected)
+	}
+} 
+	 width={'95px'}
+>
+Drink
+</Button>
+</Row>
+<VerticalSpace height={'20px'} />
+<VerticalSpace height={'8px'} backColor={'#F4F5F7'} />
+<VerticalSpace height={'15px'} />
+	<Row>
+	<Taping style={
+		tabClick.tabSelected == 1
+			? null
+			: styles.notTabed
+	}  fontColor={
+		tabClick.tabSelected == 1
+			? null
+			: '#9FA5C0'
+	}
+	onPress={() => setTabClick({ tabSelected: 1 })} >Left</Taping>
+	<Taping
+	style={
+		tabClick.tabSelected == 2
+			? null
+			: styles.notTabed
+	}
+	fontColor={
+		tabClick.tabSelected == 2
+			? null
+			: '#9FA5C0'
+	}
+	onPress={() => setTabClick({ tabSelected: 2 })}>Right</Taping>
+	</Row>
+	</Container>
+				</>
+			}
+          
+            contentContainerStyle={{flexDirection:"column",justifyContent: 'space-between'}} 
+            numColumns={2}
+            data={results}
+            keyExtractor = {results => results.id}
+            renderItem={({item}) =>{
+                return(
+				// <View style={{alignItems:'center'}}>
+                <RecipeDetails result={item} />
+				// </View>
+				
+              
+                )
+            }}
+            />}
+					
+					
 					
 					</View>
 					
-		</Container>
+					</View>	
+					</Container>
+		// </ScrollView>
 		
-		</ScrollView>
+	
 	
 	)
 }
@@ -170,7 +193,13 @@ const styles = StyleSheet.create({
 	CardsStyle:{
 		flexDirection: 'row',
 		justifyContent: 'space-around',
-		flexWrap: 'wrap'
+	
+	},
+	CardStyle:{
+		backgroundColor:'white',
+		width:'100%',
+		flexDirection: 'row',
+		justifyContent: 'space-between'
 	}
 })
 
