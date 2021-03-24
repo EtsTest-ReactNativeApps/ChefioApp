@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { View, StyleSheet, ScrollView,Text} from 'react-native'
 import HorizontalSpace from '../../Components/layout/HorizontalSpace'
 import Title from '../../Components/core/Title'
@@ -10,25 +10,30 @@ import Taping from '../../Components/core/TabButton'
 import RecipeCard from '../../Components/core/RecipeCard'
 import SearchBar from '../../Components/core/SearchBar'
 import yelp from '../../api/yelp'
-import Input from '../../Components/core/Input'
-import { AntDesign } from '@expo/vector-icons'
+
 const HomeScreen = () => {
 	var [buttonClick, setButtonClick] = useState({ btnSelected: 1 })
     var [tabClick, setTabClick] = useState({ tabSelected: 1 })
 
 	const [term,setTerm] = useState('');
     const [results,setResults] = useState([])
+	const [errMessg, setErrMessg] = useState('')
 
-	const searchApi = async() =>{
+	const searchApi = async(searchTerm) =>{
+		try{
 		const response = await yelp.get('/search', {
             params: {
                 limit: 50,
-                term,
+                term: searchTerm,
                 location: 'san jose'
             }
         })
-		setResults(response.data.businesses)
+		setResults(response.data.businesses) }
+		catch (e) {
+			setErrMessg('Something Went Wrong')
+		}
 	}
+useEffect(()=>{searchApi('pasta')},[])
 
 	return (
 		
@@ -43,7 +48,7 @@ const HomeScreen = () => {
 
         		<SearchBar term = {term}
         				   onTermChange = {setTerm}
-         				  onTermSubmit = {searchApi} />
+         				  onTermSubmit = {() =>searchApi(term)} />
 
 			<Text>We Have found {results.length}</Text>
         	<Row direction={'flex-start'}>
@@ -117,7 +122,7 @@ const HomeScreen = () => {
                     onPress={() => setTabClick({ tabSelected: 2 })}>Right</Taping>
                     </Row>
 					<View style={styles.CardsStyle}>
-					
+					{errMessg ? <Text> {errMessg} </Text> : null}
 					<RecipeCard/>
 					<RecipeCard/>
 					<RecipeCard/>
