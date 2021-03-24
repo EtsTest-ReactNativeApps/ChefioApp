@@ -2,9 +2,9 @@ import React from 'react'
 import {View,StyleSheet} from 'react-native'
 import styled from 'styled-components'
 
-const Button = ({onPress, children,backColor,fontColor, width, isTransparent,height,style}) =>{
+const Button = ({onPressIn,onPress, children,backColor,fontColor, width, isTransparent,height,style}) =>{
     return(<View style={styles.Division} >
-       <RoundedTouchableOpacity style={style} width= {width}bg={backColor} height={height} onPress={onPress} isTransparent={isTransparent} >         
+       <RoundedTouchableOpacity style={style} width= {width}bg={backColor} height={height} onPress={onPress} isTransparent={isTransparent} onPressIn={onPressIn} >         
           <ButtonText FC = {fontColor} style={style}
        
           > {children}</ButtonText>

@@ -9,31 +9,31 @@ import Button from '../../Components/core/Button';
 import Taping from '../../Components/core/TabButton'
 import RecipeCard from '../../Components/core/RecipeCard'
 import SearchBar from '../../Components/core/SearchBar'
-import yelp from '../../api/yelp'
+import useResults from '../../hooks/useResults'
+
 
 const HomeScreen = () => {
 	var [buttonClick, setButtonClick] = useState({ btnSelected: 1 })
     var [tabClick, setTabClick] = useState({ tabSelected: 1 })
 
 	const [term,setTerm] = useState('');
-    const [results,setResults] = useState([])
-	const [errMessg, setErrMessg] = useState('')
+    const [searchApi,results,errMessg] = useResults();
 
-	const searchApi = async(searchTerm) =>{
-		try{
-		const response = await yelp.get('/search', {
-            params: {
-                limit: 50,
-                term: searchTerm,
-                location: 'san jose'
-            }
-        })
-		setResults(response.data.businesses) }
-		catch (e) {
-			setErrMessg('Something Went Wrong')
+
+	const filterResultByKind = (kind) =>{
+		
+		switch(kind){
+			case 1:
+				searchApi('restaurant')
+			case 2:
+				 searchApi('food')
+			case 3:
+				 searchApi('drink')
+			default :
+				break;
 		}
 	}
-useEffect(()=>{searchApi('pasta')},[])
+
 
 	return (
 		
@@ -64,7 +64,12 @@ useEffect(()=>{searchApi('pasta')},[])
 							? null
 							: styles.notSelected
 					} 
-                    onPress={() => setButtonClick({ btnSelected: 1 })} 
+					onPressIn = {() =>{setButtonClick({ btnSelected: 1	})
+					}}
+                    onPress={() =>{ 
+									filterResultByKind(buttonClick.btnSelected) 
+									}
+				} 
                     width={'72px'} 
 				>
 					All
@@ -76,7 +81,11 @@ useEffect(()=>{searchApi('pasta')},[])
 							? null
 							: styles.notSelected
 					} 
-                    onPress={() => setButtonClick({ btnSelected: 2 })} 
+					onPressIn = {() =>{setButtonClick({ btnSelected: 2	})}}
+                    onPress={() => {
+					filterResultByKind(buttonClick.btnSelected)
+					}
+				} 
                      width={'90px'}
 				>
 				Food
@@ -88,7 +97,11 @@ useEffect(()=>{searchApi('pasta')},[])
 							? null
 							: styles.notSelected
 					}
-                    onPress={() => setButtonClick({ btnSelected: 3 })} 
+					onPressIn = {() =>{setButtonClick({ btnSelected: 3	})}}
+                    onPress={() => {
+					filterResultByKind(buttonClick.btnSelected)
+					}
+				} 
                      width={'95px'}
 				>
 				Drink
