@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
-const Taping = ({children, style, onPress,fontColor}) => {
-    return(<InputView>
-        <RoundedTouchableOpacity style={style}  onPress={onPress}>
-            <Title color={fontColor}>
-                {children}
-            </Title>
-        </RoundedTouchableOpacity>
-    </InputView>)
+const Taping = ({ children, style, onPress, fontColor }) => {
+  return (
+    <InputView>
+      <RoundedTouchableOpacity style={style} onPress={onPress}>
+        <Title color={fontColor}>{children}</Title>
+      </RoundedTouchableOpacity>
+    </InputView>
+  )
 }
 
 const InputView = styled.View`
@@ -34,5 +33,4 @@ margin-bottom: 16px
 text-align: center;
 `
 
-
-export default Taping;
+export default Taping

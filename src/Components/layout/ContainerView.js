@@ -1,17 +1,21 @@
 import React from 'react'
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 import styled from 'styled-components'
-import {  SafeAreaView } from 'react-native-safe-area-context';
-const Container =({children}) =>{
-    return(
-        <SafeAreaView  style={{ flex: 1, justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white' }}>
-        <ContainerView >
-            {children}
-        </ContainerView>
-        </SafeAreaView>
-    )
+import { SafeAreaView } from 'react-native-safe-area-context'
+const Container = ({ children }) => {
+  return (
+    <SafeAreaView
+      style={{
+        flex: 1,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: 'white',
+      }}
+    >
+      <ContainerView>{children}</ContainerView>
+    </SafeAreaView>
+  )
 }
-
 
 const ContainerView = styled(SafeAreaView)`
     align-items:center;
@@ -21,8 +25,6 @@ const ContainerView = styled(SafeAreaView)`
     
 
 `
-const styles = StyleSheet.create({
-
-})
+const styles = StyleSheet.create({})
 
 export default Container

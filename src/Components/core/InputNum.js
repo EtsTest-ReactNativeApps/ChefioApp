@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const InputNum = ({inputPlaceHolder, Password, children, Width, Height}) => {
-return(
-<InputView WD={Width} HG={Height}>
-    {children}
-    <InputField placeholder={inputPlaceHolder} secureTextEntry={Password}/>
-
-</InputView>
-)
+const InputNum = ({ inputPlaceHolder, Password, children, Width, Height }) => {
+  return (
+    <InputView WD={Width} HG={Height}>
+      {children}
+      <InputField placeholder={inputPlaceHolder} secureTextEntry={Password} />
+    </InputView>
+  )
 }
 
 const InputView = styled.View`
@@ -34,4 +33,4 @@ align-self: center;
 
 color: #3E5481
 `
-export default InputNum;
+export default InputNum
