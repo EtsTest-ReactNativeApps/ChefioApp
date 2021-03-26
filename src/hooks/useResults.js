@@ -7,6 +7,19 @@ export default() => {
         const [results,setResults] = useState([])
 	const [errMessg, setErrMessg] = useState('')
 
+	const filterResultByKind = (kind) => {
+		switch (kind) {
+		  case 1:
+			return searchApi('restaurant');
+		  case 2:
+			return searchApi('food');
+		  case 3:
+			return searchApi('drink');
+		  default:
+			break;
+		}
+	  };
+	  
 	const searchApi = async(searchTerm) =>{
 		try{
 			
@@ -29,5 +42,5 @@ useEffect(()=>{
 	
 	searchApi('pasta')},[])
 
-    return [searchApi,results,errMessg,loading];
+    return [searchApi,filterResultByKind,results,errMessg,loading];
 }
