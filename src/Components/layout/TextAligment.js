@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {View, StyleSheet} from 'react-native'
+
 
 const TextAligment = ({children, direction}) =>{
 return(<Aligment direction= {direction}>
@@ -9,10 +9,6 @@ return(<Aligment direction= {direction}>
 
 </Aligment>)
 }
-
-const styles = StyleSheet.create({
-
-})
 
 const Aligment = styled.View`
 margin-left:${props => props.direction == 'flex-start' ? '24px' : '0px'}

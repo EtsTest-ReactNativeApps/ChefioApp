@@ -1,11 +1,9 @@
-
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { StyleSheet,View,StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {  createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -59,7 +57,7 @@ const AppTabsScreen = () =>{
            
           default:
             break;
-            // code block
+          
         }
        
         

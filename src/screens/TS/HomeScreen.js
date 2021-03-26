@@ -11,6 +11,7 @@ import SearchBar from '../../Components/core/SearchBar'
 import useResults from '../../hooks/useResults'
 import RecipeDetails from '../../Components/core/RecipeDetails'
 import LoadingComponent from '../../Components/core/LoadingComponent'
+
 const HomeScreen = () => {
 
 	var [buttonClick, setButtonClick] = useState({ btnSelected: 1 })
@@ -23,8 +24,10 @@ const HomeScreen = () => {
 		
 		switch(kind){
 			case 1:
+				
 				return searchApi('restaurant')
 			case 2:
+				
 			    return searchApi('food')
 			case 3:
 				return searchApi('drink')
@@ -33,23 +36,31 @@ const HomeScreen = () => {
 		}
 	}
 	
+	
 	return (
 
 			
         <Container>
+			
 				{errMessg ? <Text> {errMessg} </Text> :   
             
+		
 			<FlatList 
-			ListHeaderComponent={
+
+		
+
+	ListHeaderComponent={
 							<> 
+						
 							<Container>
 							<VerticalSpace height={'20px'}/>
+							
 
 			<SearchBar term = {term}
-					onTermChange = {setTerm}
-					onTermSubmit = {() =>searchApi(term)} />
+						onTermChange = {setTerm}
+					onTermSubmit = {() => searchApi(term)} />
 		
-			{/* <Text>We Have found {results.length}</Text> */}
+			<Text>We Have found {results.length}</Text>
 			<Row direction={'flex-start'}>
 			<Title fontWeight={'700'} fontSize={'17px'}>
 				Category
@@ -140,12 +151,12 @@ const HomeScreen = () => {
 				</>
 			}
           
-            contentContainerStyle={{flexDirection:"column",justifyContent: 'space-between'}} 
-            numColumns={2}
-            data={results}
-            keyExtractor = {results => results.id}
-            renderItem={({item}) =>{
-				console.log(loading)
+    contentContainerStyle={{flexDirection:"column",justifyContent: 'space-between'}} 
+    numColumns={2}
+    data={results}
+    keyExtractor = {results => results.id}
+     renderItem={({item}) =>{
+			
 				
                 return(
 					

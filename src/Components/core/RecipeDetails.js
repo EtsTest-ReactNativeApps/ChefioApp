@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet ,View,FlatList} from 'react-native'
 import styled from 'styled-components'
-import Row from '../layout/Row'
 import VerticalSpace from '../layout/VerticalSpace'
 
 

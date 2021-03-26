@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 import {View, Text, TouchableOpacity ,StyleSheet} from  'react-native'
-import Button from '../../Components/core/Button';
+
 import ButtonTransparent from '../../Components/core/ButtonTransparent';
-import Input from '../../Components/core/Input';
-import Title from '../../Components/core/Title';
+
 import Container from '../../Components/layout/ContainerView';
 import Row from '../../Components/layout/Row';
-import RecipeCard from '../../Components/core/RecipeCard'
+
 
 const ProfileScreen = () =>{
     
@@ -50,9 +49,7 @@ const notClicked ={
             </ButtonTransparent>
             </Row>
             
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
+         
             </Container>
           
     )

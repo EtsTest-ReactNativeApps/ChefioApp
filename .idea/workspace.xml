@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82f26aa0-2274-4fe3-a38c-8a642780d1dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/core/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/core/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/core/RecipeCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/core/RecipeDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/core/RecipeDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/core/TabButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/core/TabButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/layout/ContainerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/ContainerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/layout/HorizontalSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/HorizontalSpace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/layout/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/Row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/layout/TextAligment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/TextAligment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/layout/VerticalSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/VerticalSpace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TS/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TS/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TS/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TS/ProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TS/UploadScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TS/UploadScreen.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qINfdx5FxrcnDJK0Z7eB3sbboV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82f26aa0-2274-4fe3-a38c-8a642780d1dd" name="Default Changelist" comment="" />
+      <created>1616763248283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616763248283</updated>
+    </task>
+    <servers />
+  </component>
+</project>
