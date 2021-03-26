@@ -3,13 +3,17 @@ import Input from '../../Components/core/Input'
 import Title from '../../Components/core/Title'
 import Container from '../../Components/layout/ContainerView'
 import Row from '../../Components/layout/Row'
-
+import PhotoPicker from '../../hooks/PhotoPicker'
 import { Ionicons } from '@expo/vector-icons';
 import styled from 'styled-components'
-import { Image, StyleSheet } from 'react-native'
 import VerticalSpace from '../../Components/layout/VerticalSpace'
+import { StyleSheet } from 'react-native'
+
 
 const UploadScreen = () => {
+
+const [pickImage,image] = PhotoPicker();
+
     return (
        
 <Container>
@@ -19,14 +23,13 @@ const UploadScreen = () => {
     </Row>
     <VerticalSpace />
    
-     <Image source={{
-       uri: 'https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg'
-     }} />
-      
-    <UploadView>
-<Ionicons style={styles.iconStyle} name="images" size={50} color="#D0DBEA" />
+    <UploadView onPress={pickImage}>
+    
+            <Ionicons style={styles.iconStyle} name="images" size={50} color="#D0DBEA" />
 <Title fontWeight={700} >Add Cover Photo</Title>
 <Title fontColor={'#9FA5C0'} fontSize={'12px'}>Up to (12 mb)</Title>
+
+
     </UploadView>
   
     <VerticalSpace />

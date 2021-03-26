@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import yelp from '../api/yelp'
 
 export default() => {
+	
 	const [loading, setLoading] = useState(true);
         const [results,setResults] = useState([])
 	const [errMessg, setErrMessg] = useState('')
