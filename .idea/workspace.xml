@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82f26aa0-2274-4fe3-a38c-8a642780d1dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/core/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/core/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/core/RecipeCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/core/RecipeDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/core/RecipeDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/core/TabButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/core/TabButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/layout/ContainerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/ContainerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/layout/HorizontalSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/HorizontalSpace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/layout/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/Row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/layout/TextAligment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/TextAligment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/layout/VerticalSpace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/layout/VerticalSpace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/TS/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TS/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/TS/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TS/ProfileScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/TS/UploadScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TS/UploadScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +21,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../movies-app-master/android" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SvnConfiguration">
@@ -51,5 +36,11 @@
       <updated>1616763248283</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1616888896298">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616888896298" />
   </component>
 </project>
