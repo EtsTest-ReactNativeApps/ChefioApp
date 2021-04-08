@@ -7,6 +7,5 @@ know the name and details.
 <img src="https://github.com/DanielSameh/ChefioApp/blob/master/assets/Screenshot_1617841934.png" alt="Girl in a jacket" width="300" height="500">
 <img src="https://github.com/DanielSameh/ChefioApp/blob/master/assets/Screenshot_1617841937.png" alt="Girl in a jacket" width="300" height="500">
 <img src="https://github.com/DanielSameh/ChefioApp/blob/master/assets/Screenshot_1617841945.png" alt="Girl in a jacket" width="300" height="500">
-<img src="https://github.com/DanielSameh/ChefioApp/blob/master/assets/Screenshot_1617841947.png" alt="Girl in a jacket" width="300" height="500">
 <img src="https://github.com/DanielSameh/ChefioApp/blob/master/assets/Screenshot_1617841954.png" alt="Girl in a jacket" width="300" height="500">
 <img src="https://github.com/DanielSameh/ChefioApp/blob/master/assets/Screenshot_1617841970.png" alt="Girl in a jacket" width="300" height="500">
