@@ -18,7 +18,8 @@ The design inspired by: https://www.figma.com/file/hlaIuzH51CC7lvwU4EP3Py/Chefio
 `npm start`
 
 # Demo
-
+![MovieApp demp](https://github.com/DanielSameh/ChefioApp/blob/master/assets/Chefio%20App.gif)
+<br>
 <br>
 
 # Screenshots from the App
